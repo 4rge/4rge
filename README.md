@@ -19,7 +19,20 @@ Therefore, I am highly receptive to correction and critique and collaboration.
 
 If you want to get involved in any of my projects, or want me to get involved with yours, the answer is 'yes.'
 
-Just send me a message and we can get started right away.
+Send me a message and we can get started right away.
+
+<div>
+<html>
+   <body>
+      <h2>Email Me:/h2>
+      <form action="mailto:ZZZlax@protonmail.com" method="post" enctype="text/plain">
+         Name:<br><input type="text" name="sname"> <br>
+         Subject:<br><input type="text" name="ssubject"><br>
+         <input type="submit" value="Send">
+      </form>
+   </body>
+</html>
+</div>
 
 ***
 
@@ -44,5 +57,3 @@ Project | Reason |
 Alexander | Merged |
 AudioFile | Now a function of .Pyrate |
 Shuffle | Unmaintained |
-
-[^1]: The above list is subject to change.
