@@ -44,6 +44,5 @@ Project | Reason |
 Alexander | Merged |
 AudioFile | Now a function of .Pyrate |
 Shuffle | Unmaintained |
-1 | 2 |
 
 [^1]: The above list is subject to change.
