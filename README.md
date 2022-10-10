@@ -21,18 +21,7 @@ If you want to get involved in any of my projects, or want me to get involved wi
 
 Send me a message and we can get started right away.
 
-<div>
-<html>
-   <body>
-      Email Me:
-      <form action="mailto:ZZZlax@protonmail.com" method="post" enctype="text/plain">
-         <br><input type="text" name="name"> <br>
-         <br><input type="text" name="subject"><br>
-         <input type="submit" value="Send">
-      </form>
-   </body>
-</html>
-</div>
+> ZZZlax.protonmail.com
 
 ***
 
