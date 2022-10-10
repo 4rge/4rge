@@ -24,7 +24,7 @@ Send me a message and we can get started right away.
 <div>
 <html>
    <body>
-      <h2>Email Me:/h2>
+      <h2>Email Me:</h2>
       <form action="mailto:ZZZlax@protonmail.com" method="post" enctype="text/plain">
          Name:<br><input type="text" name="sname"> <br>
          Subject:<br><input type="text" name="ssubject"><br>
