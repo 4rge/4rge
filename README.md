@@ -1,13 +1,15 @@
-# Hi, I’m ZZZlax #
+## Hi, I’m ZZZlax ##
 
 ## I work mostly with **python** and **BASH**... ##
 #### ...and a little with _php_, _Html5_, _css_ and _javascript_. ####
+
+***
 
 My main focus is on system optimization and automation.
 
 For this reason you will likely see repo's come and go here, evolve and become more efficent, very quickly.
 
----
+***
 
 **_I am self taught_**
 
@@ -19,7 +21,7 @@ If you want to get involved in any of my projects, or want me to get involved wi
 
 Just send me a message and we can get started right away.
 
----
+***
 
 #### Good advice: ####
 
@@ -32,3 +34,16 @@ Just send me a message and we can get started right away.
 * **_"You don't get points for difficulty."_**
 
 * **_"It will be there tommorow, get some sleep."_**
+
+## Defunct Projects ##
+
+Project | Reason |
+--- | --- |
+1click-tor | Binary replaced with BASH script |
+1click-zsh | Just use ohmyzsh |
+Alexander | Merged |
+AudioFile | Now a function of .Pyrate |
+Shuffle | Unmaintained |
+1 | 2 |
+
+[^1]: The above list is subject to change.
