@@ -21,8 +21,12 @@ Just send me a message and we can get started right away.
 
 #### Good advice: ####
 
-item1 #_"If no one else is doing it, it is either brilliant or stupid."_#
-item2 #_"Only an idiot admires complexity."_#
-item3 #_"Measure twice, cut once."_#
-item4 #_"You don't get points for difficulty."_#
-item5 #_"It will be there tommorow, get some sleep."_#
+* _"If no one else is doing it, it is either brilliant or stupid."_
+
+* _"Only an idiot admires complexity."_
+
+* _"Measure twice, cut once."_
+
+* _"You don't get points for difficulty."_
+
+* _"It will be there tommorow, get some sleep."_
