@@ -1,9 +1,7 @@
 # Hi, I’m ZZZlax #
 
-## I work mostly with **python** and **BASH** ##
-#### and a little with _php_, _Html5_, _css_ and _javascript_. ####
-
----
+## I work mostly with **python** and **BASH**... ##
+#### ...and a little with _php_, _Html5_, _css_ and _javascript_. ####
 
 My main focus is on system optimization and automation.
 
