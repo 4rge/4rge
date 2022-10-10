@@ -1,9 +1,9 @@
-###### Hi, I’m @ZZZlax ######
+# Hi, I’m @ZZZlax #
 
 ---
 
-## I work mostly with **python** and **BASH** #
-# and a little with _php_, _Html5_, _css_ and _javascript_. ##
+### I work mostly with **python** and **BASH** ###
+##### and a little with _php_, _Html5_, _css_ and _javascript_. #####
 
 ---
 
@@ -19,7 +19,7 @@ Just send me a message and we can get started right away.
 
 ---
 
-# Good advice: #
+#### Good advice: ####
 
 item1 #_"If no one else is doing it, it is either brilliant or stupid."_#
 item2 #_"Only an idiot admires complexity."_#
