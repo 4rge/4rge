@@ -1,5 +1,9 @@
 ## Hi, I’m ZZZlax ##
 
+<html>
+  <a href="mailto:ZZZlax@protonmail.com">Contact Me!</a>
+</html>
+
 ## I work mostly with **python** and **BASH**... ##
 #### ...and a little with _php_, _Html5_, _markdown_, _css_ and _javascript_. ####
 
@@ -20,8 +24,6 @@ Therefore, I am highly receptive to correction and critique and collaboration.
 If you want to get involved in any of my projects, or want me to get involved with yours, the answer is 'yes.'
 
 Send me a message and we can get started right away.
-
-> ZZZlax.protonmail.com
 
 ***
 
@@ -46,7 +48,3 @@ Project | Reason |
 Alexander | Merged |
 AudioFile | Now a function of .Pyrate |
 Shuffle | Unmaintained |
-
-<html>
-  <a href="mailto:ZZZlax@protonmail.com">Contact Me!</a>
-</html>
