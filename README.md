@@ -46,3 +46,7 @@ Project | Reason |
 Alexander | Merged |
 AudioFile | Now a function of .Pyrate |
 Shuffle | Unmaintained |
+
+<html>
+  <a href="mailto:ZZZlax@protonmail.com">Contact Me!</a>
+</html>
