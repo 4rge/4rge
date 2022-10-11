@@ -46,7 +46,3 @@ Project | Reason |
 Alexander | Merged |
 AudioFile | Now a function of .Pyrate |
 Shuffle | Unmaintained |
-
-<html>
-  <link rel="stylesheet" href="https://unpkg.com/terminal.css@0.7.2/dist/terminal.min.css" />
-</html>
