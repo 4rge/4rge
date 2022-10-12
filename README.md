@@ -9,7 +9,7 @@
 
 ***
 
-My main focus is on system optimization and automation.
+My main focus is on system optimization &amp; automation.
 
 For this reason you will likely see repo's come and go here, evolve and become more efficent, very quickly.
 
@@ -17,13 +17,13 @@ For this reason you will likely see repo's come and go here, evolve and become m
 
 **_I am self taught_**
 
-For the good, and the bad that comes with that.
+For the good, &amp; the bad that comes with that.
 
-Therefore, I am highly receptive to correction and critique and collaboration.
+Therefore, I am highly receptive to correction &amp; critique and collaboration.
 
 If you want to get involved in any of my projects, or want me to get involved with yours, the answer is 'yes.'
 
-Send me a message and we can get started right away.
+Send me a message &amp; we can get started right away.
 
 ***
 
