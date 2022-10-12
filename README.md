@@ -1,4 +1,4 @@
-<img src="style.svg" width="1500" height="500">
+<img src="style.svg" width="800" height="200">
 
 ## I work mostly with **python** and **BASH**... ##
 #### ...and a little with _php_, _Html5_, _markdown_, _css_ and _javascript_. ####
@@ -35,4 +35,4 @@ Send me a message &amp; we can get started right away.
 
 * **_"It will be there tommorow, get some sleep."_**
 
-<img src="defunct.svg" width="1500" height="500">
+<img src="defunct.svg" width="1500" height="1000">
