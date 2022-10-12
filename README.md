@@ -1,10 +1,8 @@
 <html>
 <link rel="stylesheet" href="./style.css" />
-</html>
 
-## Hi, I’m ZZZlax ##
+<p>Hi! I'm ZZZlax!</p>
 
-<html>
   <a href="mailto:ZZZlax@protonmail.com">Contact Me!</a>
 </html>
 
