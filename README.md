@@ -1,8 +1,4 @@
-<html> 
-<h1>Hi! I'm ZZZlax!</h1>
-
-  <a href="mailto:ZZZlax@protonmail.com">Contact Me!</a>
-</html>
+<img src="style.svg" width="800" height="400">
 
 ## I work mostly with **python** and **BASH**... ##
 #### ...and a little with _php_, _Html5_, _markdown_, _css_ and _javascript_. ####
