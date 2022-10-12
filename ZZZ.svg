@@ -21,7 +21,7 @@ p {
   white-space: nowrap;
   overflow: hidden;    
   font-family: "Source Code Pro", monospace;  
-  font-size: 30px;
+  font-size: 10px;
   color: #00FF00;
   margin: 0 auto;
 }
@@ -48,9 +48,6 @@ p {
 <section id="typeWriter">
 <div class="terminal-card" />
     <div>
-        <p>_Contact me via:_____________________________________________________________</p>
-	    <p>_Email: ZZZlax@protonmail.com________________________________________________</p>
-	    <p>_____________________________________________________________________________</p>
         <p>___________________________XOkOKNW_________________WWWW______________________</p>
         <p>__________________________Nxllcclx0KKKK000KXNWWNKOkxddOW_____________________</p>
         <p>_________________________W0oooolc:cloooooloodxxdolooocoX_____________________</p>
@@ -82,7 +79,6 @@ p {
         <p>_____NKkolllloxOOOOKKKKKKXNNNXXKK000OOOOO0000000kdolcccloxOOdccccc:ccok0XW___</p>
         <p>_______WNXK0000KKXW_______________WWWWWWWWWW______WWNNNWWNK0Oxdoooodk0XW_____</p>
         <p>_____________________________________________________________________________</p>
-	    <p>*****************************************************************************</p>
         </div>
         </section>
         </div>
