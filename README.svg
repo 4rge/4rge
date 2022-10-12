@@ -1,4 +1,4 @@
-<svg fill="none" viewBox="0 0 800 750" width="800" height="750" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 800 1000" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
 
@@ -16,7 +16,7 @@ body{
   background-color: #000000;   
 }
 
-h2 {
+h2, h4, td, th, li {
   border-right: transparent rgba(0,255,0,.75);
   white-space: nowrap;
   overflow: hidden;    
@@ -26,39 +26,10 @@ h2 {
   margin: 0 auto;
 }
 
-td {
-  border-right: transparent rgba(0,255,0,.75);
-  white-space: nowrap;
-  overflow: hidden;    
-  font-family: 'Source Code Pro', monospace;  
-  font-size: 10px;
-  color: #00FF00;
-  margin: 0 auto;
-}
-
-th {
-  border-right: transparent rgba(0,255,0,.75);
-  white-space: nowrap;
-  overflow: hidden;    
-  font-family: 'Source Code Pro', monospace;  
-  font-size: 10px;
-  color: #00FF00;
-  margin: 0 auto;
-}
 
 /* Animation */
 
-h2 {
-  animation: animated-text 4s steps(29,end) 1s 1 normal both,
-             animated-cursor 600ms steps(29,end) infinite;
-}
-
-td {
-  animation: animated-text 4s steps(29,end) 1s 1 normal both,
-             animated-cursor 600ms steps(29,end) infinite;
-}
-
-th {
+h2, h4, td, th, li {
   animation: animated-text 4s steps(29,end) 1s 1 normal both,
              animated-cursor 600ms steps(29,end) infinite;
 }
@@ -78,7 +49,7 @@ th {
 <div class="terminal-card" />
     <div>
 <h2 class="code-line" data-line-start='0' data-line-end='1' ><a id="I_work_mostly_with_python_and_BASH_0"></a>I work mostly with python and BASH…</h2>
-<h4 class="code-line" data-line-start='1' data-line-end='2' ><a id="and_a_little_with__php___Html5___markdown___css__and__javascript__1"></a>…and a little with <em>php</em>, <em>Html5</em>, <em>markdown</em>, <em>css</em> and <em>javascript</em>.</h4>
+<h4 class="code-line" data-line-start='1' data-line-end='2' ><a id="and_a_little_with__php___Html5___markdown___css__and__javascript__1"></a>…as well as <em>php</em>, <em>Html5</em>, <em>markdown</em>, <em>css</em> and <em>javascript</em>.</h4>
 <hr>
 <p class="has-line-data" data-line-start="5" data-line-end="6">My main focus is on system optimization &amp; automation.</p>
 <p class="has-line-data" data-line-start="7" data-line-end="8">For this reason you will likely see repo’s come and go here, evolve and become more efficent, very quickly.</p>
