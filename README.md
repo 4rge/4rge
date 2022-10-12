@@ -35,12 +35,4 @@ Send me a message &amp; we can get started right away.
 
 * **_"It will be there tommorow, get some sleep."_**
 
-## Defunct Projects ##
-
-Project | Reason |
---- | --- |
-1click-tor | Binary replaced with BASH script |
-1click-zsh | Just use ohmyzsh |
-Alexander | Merged |
-AudioFile | Now a function of .Pyrate |
-Shuffle | Unmaintained |
+<img src="defunct.svg" width="800" height="200">
