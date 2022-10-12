@@ -1,4 +1,4 @@
-<img src="style.svg" width="800" height="200">
+<img src="style.svg" width="800" height="100">
 <img src="README.svg" width="8000" height="1500">
 
 ## I work mostly with **python** and **BASH**... ##
