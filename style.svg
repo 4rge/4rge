@@ -19,9 +19,24 @@ p {
   color: #00FF00;
   margin: 0 auto;
 }
+        
+a {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 10px;
+  color: #00FF00;
+  margin: 0 auto;
+}
 
 /* Animation */
 p {
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+        
+a {
   animation: animated-text 4s steps(29,end) 1s 1 normal both,
              animated-cursor 600ms steps(29,end) infinite;
 }
@@ -39,7 +54,7 @@ p {
       </style>
 
       
-  <h1>Hi! I'm ZZZlax!</h1>
+  <p>Hi! I'm ZZZlax!</p>
 
   <a href="mailto:ZZZlax@protonmail.com">Contact Me!</a>
     </div>
