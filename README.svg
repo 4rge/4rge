@@ -16,7 +16,7 @@ body{
   background-color: #000000;   
 }
 
-h2, h4, td, th, li {
+h2, td, th {
   border-right: transparent rgba(0,255,0,.75);
   white-space: nowrap;
   overflow: hidden;    
@@ -26,10 +26,20 @@ h2, h4, td, th, li {
   margin: 0 auto;
 }
 
+h4, em, li {
+  border-right: transparent rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 15px;
+  color: #00FF00;
+  margin: 0 auto;
+}
+
 
 /* Animation */
 
-h2, h4, td, th {
+h2, h4, td, th, li {
   animation: animated-text 4s steps(29,end) 1s 1 normal both,
              animated-cursor 600ms steps(29,end) infinite;
 }
