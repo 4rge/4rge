@@ -1,5 +1,5 @@
 <img src="style.svg" width="800" height="200">
-<img src="README.svg" width="1000" height="500">
+<img src="README.svg" width="8000" height="1500">
 
 ## I work mostly with **python** and **BASH**... ##
 #### ...and a little with _php_, _Html5_, _markdown_, _css_ and _javascript_. ####
