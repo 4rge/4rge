@@ -1,50 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
-* { box-sizing: border-box; }
-
-body {
-  margin: 0;
-  padding: 0;
+body{
+  padding: 40px;
+  background-color: #000000;   
 }
 
-#typeWriter {
-  width: 100%;
-  height: 100%;
-  color: #33d011;
-  background: #222;
+p {
+  border-right: solid 3px rgba(0,255,0,.75);
+  white-space: nowrap;
+  overflow: hidden;    
   font-family: 'Source Code Pro', monospace;  
-  padding-left: 30px;
-  padding-top: 30px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-#typeWriter span {
-  display: block;
   font-size: 10px;
-  letter-spacing: 2px;
+  color: #00FF00;
+  margin: 0 auto;
 }
 
-#typeWriter :last-child::after {
-  content: '_';
-  display: inline-block;
-  animation: blink 1s step-end infinite;
+/* Animation */
+p {
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
 }
 
-#typeWriter #init::after { display: none; }
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 575px;}
+}
 
-#typeWriter span.typewriter-item::before {
-  content: '>';
-  display: inline-block;
-  margin-right: 10px;
-}
- @keyframes 
-blink {  from, to {
- opacity: 0;
-}
- 50% {
- opacity: 1;
-}
+@keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
 }
