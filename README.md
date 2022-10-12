@@ -35,4 +35,4 @@ Send me a message &amp; we can get started right away.
 
 * **_"It will be there tommorow, get some sleep."_**
 
-<img src="defunct.svg" width="1000" height="1000">
+<img src="defunct.svg" width="1500" height="500">
