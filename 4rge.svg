@@ -1,42 +1,40 @@
-<body style="background-color: #000000; padding: 40px;">
+<svg fill="none" viewBox="0 0 200 20" width="200" height="20" xmlns="http://www.w3.org/2000/svg">
+  <a href="https://4rge.github.io" target="_blank">
+    <foreignObject width="100%" height="100%">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <style>
+          @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
-    <a href="https://4rge.github.io" target="_blank" style="display: inline-block;">
-        <svg fill="none" viewBox="0 0 200 20" width="200" height="20" xmlns="http://www.w3.org/2000/svg">
-            <foreignObject width="100%" height="100%">
-                <div xmlns="http://www.w3.org/1999/xhtml">
-                    <style>
-                        @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+          p {
+            border-right: solid 3px rgba(0, 255, 0, .75);
+            white-space: nowrap;
+            overflow: hidden;    
+            font-family: 'Source Code Pro', monospace;  
+            font-size: 20px;
+            color: #00FF00;
+            margin: 0 auto;
+          }
 
-                        p {
-                            border-right: solid 3px rgba(0, 255, 0, .75);
-                            white-space: nowrap;
-                            overflow: hidden;    
-                            font-family: 'Source Code Pro', monospace;  
-                            font-size: 20px;
-                            color: #00FF00;
-                            margin: 0 auto;
-                        }
+          /* Animation */
+          p {
+            animation: animated-text 4s steps(29, end) 1s 1 normal both,
+                       animated-cursor 600ms steps(29, end) infinite;
+          }
 
-                        /* Animation */
-                        p {
-                            animation: animated-text 4s steps(29, end) 1s 1 normal both,
-                                       animated-cursor 600ms steps(29, end) infinite;
-                        }
+          @keyframes animated-text {
+            from { width: 0; }
+            to { width: 575px; }
+          }
 
-                        @keyframes animated-text {
-                            from { width: 0; }
-                            to { width: 575px; }
-                        }
-
-                        @keyframes animated-cursor {
-                            from { border-right-color: rgba(0, 255, 0, .75); }
-                            to { border-right-color: transparent; }
-                        }
-                    </style>
-                    <p>I am 4rge</p>
-                </div>
-            </foreignObject>
-        </svg>
-    </a>
-
-</body>
+          @keyframes animated-cursor {
+            from { border-right-color: rgba(0, 255, 0, .75); }
+            to { border-right-color: transparent; }
+          }
+        </style>
+        
+        <p>I am 4rge</p>
+        
+      </div>
+    </foreignObject>
+  </a>
+</svg>
