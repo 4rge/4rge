@@ -1,0 +1,10 @@
+# Example usage in another repository: .github/workflows/trigger-reusable.yml
+name: "Trigger Reusable Workflow"
+on:
+  push:
+    branches:
+      - main
+ 
+jobs:
+  call-reusable-build:
+    uses: 4rge/config-repo/.github/workflows/<workflow-name>.yaml@main
