@@ -1,0 +1,179 @@
+name: Lint Scripts
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      files:
+        description: 'Comma-separated list of files to lint (optional)'
+        required: false
+        default: ''
+      linters:
+        description: 'Comma-separated list of linters to run (optional)'
+        required: false
+        default: 'shellcheck,flake8,eslint'
+      base_branch:
+        description: 'Base branch to check for modified files (default: main)'
+        required: false
+        default: 'main'
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    env:
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Cache Python Packages
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/setup.py') }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Specify the Node.js version you want
+
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y shellcheck
+          pip install flake8 codeclimate-test-reporter  # Install flake8 and codeclimate-test-reporter
+          npm install -g eslint  # Install eslint globally
+
+      - name: Validate Configuration Files
+        run: |
+          for config in .flake8 .eslintrc.json .codeclimate.yml; do
+            if [[ -f "$config" ]]; then
+              echo "Validating $config"
+              if ! jq empty "$config" &>/dev/null; then
+                echo "Invalid JSON in $config"
+                exit 1
+              fi
+            fi
+          done
+
+      - name: Prepare Lint Configuration
+        run: |
+          echo "Merging configurations..." > config_merge.log
+          for config in .flake8 .eslintrc.json .codeclimate.yml; do
+            if [ -f "$config" ]; then
+              cp "$config" "${config%.*}_config.yml"
+              echo "Detected and merged configuration for $config." >> config_merge.log
+            fi
+          done
+          echo "Configuration merge complete." >> config_merge.log
+
+      - name: Detect Modified Files
+        id: detect_files
+        run: |
+          set -e
+          echo "Detecting modified files..."
+          git fetch --all || { echo "Git fetch failed"; exit 1; }
+          
+          # Use the base_branch input or default to main
+          base_branch="${{ github.event.inputs.base_branch }}"
+          [ -z "$base_branch" ] && base_branch="main"
+          echo "Checking for base branch: $base_branch"
+
+          # Check if we can find the base branch
+          if git show-ref --verify --quiet "refs/remotes/origin/$base_branch"; then
+            modified_files=$(git diff --name-only "origin/$base_branch"..."HEAD")
+
+            if [[ -z "$modified_files" ]]; then
+              echo "No modified files detected between origin/$base_branch and HEAD."
+              exit 0
+            else
+              echo "$modified_files" | grep -E '\.(sh|py|js)$' > modified_files.txt
+              echo "Filtered modified files: $(cat modified_files.txt)"
+            fi
+          else
+            echo "Base branch '$base_branch' not found"
+            exit 1
+          fi
+
+      - name: Lint Selected Files
+        id: lint
+        run: |
+          error_flag=0
+          summary_report="## Linting Summary Report\n"
+          summary_report+="| File | Linter | Warnings | Errors | Issues |\n"
+          summary_report+="|------|--------|----------|--------|--------|\n"
+          details_file="lint_details.md"
+          lint_file() {
+            local file="$1"
+            local linter="$2"
+            output=$($linter "$file" 2>&1)
+            exit_status=$?
+            if [ $exit_status -ne 0 ]; then
+              error_flag=1
+              issue_count=$(echo "$output" | wc -l)
+              warning_count=$(echo "$output" | grep -c "warning:")
+              error_count=$(echo "$output" | grep -c "error:")
+              summary_report+="| $file | $(basename "$linter") | $warning_count | $error_count | $issue_count |\n"
+              echo "::error file=$file::Linter output:\n\`\`\`\n$output\n\`\`\`" # GitHub annotation
+              echo -e "## Linter output for $file\n\`\`\`\n$output\n\`\`\`" >> "$details_file"
+            fi
+          }
+          
+          if [[ -e modified_files.txt && -s modified_files.txt ]]; then
+            while read -r file; do
+              case "$file" in
+                *.sh) lint_file "$file" "shellcheck" ;;
+                *.py) lint_file "$file" "flake8" ;;
+                *.js) lint_file "$file" "eslint" ;;
+              esac
+            done < modified_files.txt
+          fi
+
+          if [ $error_flag -ne 0 ]; then
+            echo -e "$summary_report" > linting_summary.md
+            echo "Linting errors detected. Check the summary report."
+            exit 1
+          else
+            summary_report+="| All scripts | Success | 0 | 0 | 0 |\n"
+            echo -e "$summary_report" > linting_summary.md
+            echo "All scripts linted successfully!"
+          fi
+
+      - name: Upload Linting Summary Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: linting-summary
+          path: linting_summary.md
+
+      - name: Comment on Pull Request
+        if: failure() && github.event_name == 'pull_request'
+        run: |
+          REPORT_URL="${{ github.event.pull_request.html_url }}"
+          curl -X POST -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            -d "{\"body\": \"Linting failed! Check the report [here](${REPORT_URL}) for details.\"}" \
+            "${{ github.event.pull_request.comments_url }}"
+
+      - name: Notify on Slack
+        if: failure()
+        run: |
+          if [[ -n "${{ env.SLACK_WEBHOOK_URL }}" ]]; then
+            curl -X POST -H "Content-Type: application/json" \
+              -d "{\"text\": \"Linting Errors Detected in PR #${{ github.event.number }}! Please check the summary report for specific errors. Summary report [here](https://github.com/${{ github.repository }}/actions/artifacts/linting-summary).\"}" \
+              "${{ env.SLACK_WEBHOOK_URL }}"
+          fi
+        
+      - name: Cleanup Temporary Files
+        run: |
+          echo "Cleaning up temporary files..."
+          rm -f modified_files.txt
